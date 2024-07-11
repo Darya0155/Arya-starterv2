@@ -25,6 +25,10 @@
             <groupId>com.arya</groupId>
             <artifactId>arya-core-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.arya</groupId>
+            <artifactId>arya-spring-kafka</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
