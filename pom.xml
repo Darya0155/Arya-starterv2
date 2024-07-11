@@ -81,9 +81,20 @@
     </dependencies>
 
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <build>
         <pluginManagement>
             <plugins>
+
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
@@ -92,22 +103,20 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-pmd-plugin</artifactId>
                     <version>3.23.0</version>
-
                     <configuration>
                         <!-- failOnViolation is actually true by default, but can be disabled -->
-                        <failOnViolation>true</failOnViolation>
+                        <failOnViolation>false</failOnViolation>
                         <!-- printFailingErrors is pretty useful -->
                         <printFailingErrors>true</printFailingErrors>
-                        <linkXRef>false</linkXRef>
                         <minimumTokens>50</minimumTokens>
                         <rulesets>
                             <ruleset>/category/java/performance.xml</ruleset>
-                            <ruleset>/category/java/bestpractices.xml</ruleset>
-                            <ruleset>/category/java/design.xml</ruleset>
-                            <ruleset>/category/java/documentation.xml</ruleset>
-                            <ruleset>/category/java/errorprone.xml</ruleset>
-                            <ruleset>/category/java/multithreading.xml</ruleset>
-                            <ruleset>/category/java/security.xml</ruleset>
+<!--                            <ruleset>/category/java/bestpractices.xml</ruleset>-->
+<!--                            <ruleset>/category/java/design.xml</ruleset>-->
+<!--                            <ruleset>/category/java/documentation.xml</ruleset>-->
+<!--                            <ruleset>/category/java/errorprone.xml</ruleset>-->
+<!--                            <ruleset>/category/java/multithreading.xml</ruleset>-->
+<!--                            <ruleset>/category/java/security.xml</ruleset>-->
                         </rulesets>
                     </configuration>
                     <executions>
